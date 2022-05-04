@@ -15,12 +15,10 @@ float ballx, bally, balld; //ball
 //keyboard variables
 boolean wkey, skey, upkey, downkey;
 
-
-
 void setup() { /////////////////////////////////////////
   size(800, 600);
   mode = GAME;
-
+  
   //initialize paddles
   leftx = 0;
   lefty = height/2;
@@ -37,8 +35,6 @@ void setup() { /////////////////////////////////////////
 
   //initialize keyboard vars
   wkey = skey = upkey = downkey = false;
-
-
 }
 
 void draw() {

@@ -17,10 +17,11 @@ void game() {
    bally = bally + vy;
   
   //collisions
-  //if (d < = r = R) {
-  //  vx = vx * -1;
-    
-  //}
+  //d = sqrt(ballx + leftx = )
+  
+  //if (d <= r = R) {
+  //vx = vx * -1;
+    //}
   
   
   

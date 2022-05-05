@@ -12,6 +12,8 @@ final int GAMEOVER = 4;
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
 float ballx, bally, balld; //ball
 float vx, vy; //target velocity
+float d;
+
 
 //keyboard variables
 boolean wkey, skey, upkey, downkey;
@@ -32,8 +34,8 @@ void setup() { /////////////////////////////////////////
   //initialize ball
   ballx = width/2;
   bally = height/2;
-  balld = 100;
-
+  balld = 100; 
+  
   //initialize keyboard vars
   wkey = skey = upkey = downkey = false;
 

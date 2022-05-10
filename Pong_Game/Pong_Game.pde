@@ -36,6 +36,9 @@ void setup() { /////////////////////////////////////////
   bally = height/2;
   balld = 100; 
   
+  //initialize distance
+  d = 75;
+  
   //initialize keyboard vars
   wkey = skey = upkey = downkey = false;
 

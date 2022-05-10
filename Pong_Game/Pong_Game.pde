@@ -37,7 +37,7 @@ void setup() { /////////////////////////////////////////
   balld = 100; 
   
   //initialize distance
-  d = 75;
+  d = dist(//leftpaddle //ball);
   
   //initialize keyboard vars
   wkey = skey = upkey = downkey = false;

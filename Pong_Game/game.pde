@@ -25,7 +25,7 @@ void game() {
 
 
   //right paddle
-  if (d <= ballx/2 + rightx/2) {
+  if (d >= ballx/2 + rightx/2) {
     vx = (ballx - rightx)/10;
     vy = (bally - righty)/10;
   }

@@ -12,7 +12,7 @@ final int GAMEOVER = 4;
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
 float ballx, bally, balld; //ball
 float vx, vy; //target velocity
-float d;
+float d1, d2;
 
 
 //keyboard variables
@@ -35,15 +35,12 @@ void setup() { /////////////////////////////////////////
   ballx = width/2;
   bally = height/2;
   balld = 100; 
-  
-  //initialize distance
-  d = dist(//leftpaddle //ball);
-  
+
   //initialize keyboard vars
   wkey = skey = upkey = downkey = false;
 
   //initialize
-  vx = random(-5,-1);
+  vx = random(-1,-1);
   vy = random(0);
 }
 

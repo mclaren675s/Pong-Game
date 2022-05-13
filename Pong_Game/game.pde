@@ -18,45 +18,31 @@ void game() {
 
   //collisions  
   //left paddle
-  if (d >= ballx/2 + leftx/2) {
+  //initialize distance
+  d1 = dist(leftx, lefty, ballx, bally);
+  if (d1 <= balld/2 + leftd/2) {
     vx = (ballx - leftx)/10;
     vy = (bally - lefty)/10;
   }
 
-
   //right paddle
-  if (d >= ballx/2 + rightx/2) {
+  d2 = dist(rightx, righty, ballx, bally);
+  if (d2 <= balld/2 + rightd/2) {
     vx = (ballx - rightx)/10;
     vy = (bally - righty)/10;
   }
 
   //top wall
-  
-  //if (bally >= bally/2) {
-  //  vy = vy * -1;
- // }
+  if (bally <= bally/2) {
+    vy = vy * -1;
+  }
+ 
   //bottom wall
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ if (bally >= bally/2) {
+    vy = vy * +1;
+  }
 
 }/////////////////////////////////////////////////////////////////////
-
-  
-
 
 void gameClicks() {
 }

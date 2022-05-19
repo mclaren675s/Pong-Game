@@ -33,7 +33,7 @@ void game() {
   }
 
   //top wall
-  if (bally <= bally/2) {
+  if (bally <= 25) {
     vy = vy * -1;
   }
  

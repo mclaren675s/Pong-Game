@@ -1,6 +1,5 @@
 //Pong Game
 //Alex Chapman
-
 //modeframework
 int mode;
 final int INTRO = 1;

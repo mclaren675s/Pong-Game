@@ -14,9 +14,22 @@ float ballx, bally, balld; //ball
 float vx, vy; //target velocity
 float d1, d2;
 
+//scoring
+int leftscore, rightscore, timer;
 
 //keyboard variables
 boolean wkey, skey, upkey, downkey;
+
+//color variables
+color white = #FFFFFF;
+color black = #000000;
+color red = #ff1b6b;
+color orange = #FF7300;
+color yellow = #f4e409;
+color green = #90FE00;
+color blue = #45caff;
+color purple = #8400FF;
+color pink = #FF00A1;
 
 void setup() { /////////////////////////////////////////
   size(800, 600);

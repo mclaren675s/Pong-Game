@@ -54,6 +54,7 @@ void setup() { /////////////////////////////////////////
   //initialize
   vx = random(-1,-1);
   vy = random(0);
+  timer = 100;
 }
 
 void draw() {

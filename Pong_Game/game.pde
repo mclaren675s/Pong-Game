@@ -39,6 +39,7 @@ void game() {
     ballx = width/2;
     bally = height/2;
     timer = 100;
+    vy = 0;
   }
   
   if (ballx > 800) {
@@ -46,6 +47,7 @@ void game() {
     ballx = width/2;
     bally = height/2;
     timer = 100;
+    vy = 0;
   }
   
   //collisions

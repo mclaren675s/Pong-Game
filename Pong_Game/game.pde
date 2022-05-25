@@ -37,14 +37,15 @@ void game() {
   if (ballx < 0) {
     rightscore++;
     ballx = width/2;
-    ballx = height/2;
+    bally = height/2;
     timer = 100;
   }
   
   if (ballx > 800) {
     leftscore++;
     ballx = width/2;
-    ballx = height/2;
+    bally = height/2;
+    timer = 100;
   }
   
   //collisions

@@ -19,12 +19,14 @@ void intro() {
   textSize(30);
 
   //1player button
+  tactilesquare(125, 330, 200, 115);
   fill(red);
   rect(125, 330, 200, 115);
   fill(black);
   text("1 Player", 175, 400);
 
   //2player button
+  tactilesquare(475, 330, 200, 115);
   fill(red);
   rect(475, 330, 200, 115);
   fill(black);
@@ -33,16 +35,17 @@ void intro() {
 
 void introClicks() {
   //1 player
-  if (mouseX > 125 && mouseX < 330 && mouseY > 200 && mouseY < 115) {
+  if (mouseX > 125 && mouseX < 325 && mouseY > 330 && mouseY < 445) {
     mode = ONEPLAYER;
     leftscore = 0;
     rightscore = 0;
   }
 
   //2 player
-  if (mouseX > 500 && mouseX < 700 && mouseY > 450 && mouseY < 550) {
+  if (mouseX > 475 && mouseX < 675 && mouseY > 330 && mouseY < 445) {
     mode = TWOPLAYER;
     leftscore = 0;
     rightscore = 0;
   }
+
 }

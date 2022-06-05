@@ -1,4 +1,4 @@
-void game() {
+void TWOPLAYER() {
   background(0);
   
   //scoreboard
@@ -22,6 +22,14 @@ void game() {
   if (upkey == true) righty = righty - 5;
   if (downkey == true) righty = righty + 5;
 
+  //restricting paddles
+  //top
+  if (lefty < 100 ) lefty = 100;
+  if (righty < 100 ) righty = 100;
+  //bottom
+  if (lefty > 500 ) lefty = 500;
+  if (righty > 500 ) righty = 500;
+  
   //ball
   fill(black);
   stroke(white);
@@ -33,6 +41,7 @@ void game() {
   ballx = ballx + vx;
   bally = bally + vy;
   }
+  
   //scoring
   if (ballx < 0) {
     rightscore++;
@@ -68,7 +77,7 @@ void game() {
   }
 
   //top wall
-  if (bally <= 25) {
+  if (bally <= 50) {
     vy = vy * -1;
   }
  
@@ -79,5 +88,5 @@ void game() {
 
 }/////////////////////////////////////////////////////////////////////
 
-void gameClicks() {
+void TWOPLAYERClicks() {
 }

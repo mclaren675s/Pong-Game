@@ -1,11 +1,20 @@
 //Pong Game
 //Alex Chapman
+
+//To Do
+//- sound effects
+//- tactile buttons
+//- Intro Screen
+//
+
+
 //modeframework
 int mode;
 final int INTRO = 1;
-final int GAME = 2;
+final int TWOPLAYER = 2;
 final int PAUSE = 3;
 final int GAMEOVER = 4;
+final int ONEPLAYER = 5;
 
 //entity variables
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
@@ -32,7 +41,9 @@ color pink = #FF00A1;
 
 void setup() { /////////////////////////////////////////
   size(800, 600);
-  mode = GAME;
+  
+  //current mode
+  mode = INTRO;
   
   //initialize paddles
   leftx = 0;
@@ -55,17 +66,20 @@ void setup() { /////////////////////////////////////////
   vx = random(-1,-1);
   vy = random(0);
   timer = 100;
+  
 }
 
 void draw() {
   if (mode == INTRO) {
     intro();
-  } else if (mode == GAME) {
-    game();
+  } else if (mode == TWOPLAYER) {
+    TWOPLAYER();
   } else if (mode == PAUSE) {
     pause();
   } else if (mode == GAMEOVER) {
     gameover();
+  } else if (mode == ONEPLAYER) {
+    ONEPLAYER();
   } else {
     println("Mode error: " + mode);
   }

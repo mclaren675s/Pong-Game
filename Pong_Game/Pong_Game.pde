@@ -42,7 +42,7 @@ color pink = #FF00A1;
 void setup() { /////////////////////////////////////////
   size(800, 600);
   
-  //current mode
+  //STARTING mode
   mode = INTRO;
   
   //initialize paddles

@@ -85,6 +85,11 @@ void TWOPLAYER() {
  if (bally >= 550) {
     vy = vy * -1;
   }
+  
+  //win
+  if (leftscore >= 3) mode = GAMEOVER;
+  if (rightscore >= 3) mode = GAMEOVER;
+  
 
 }/////////////////////////////////////////////////////////////////////
 

@@ -1,5 +1,5 @@
-void ONEPLAYER() {
-  background(255);
+void game() {
+  background(0);
   
   //scoreboard
   textSize(50);
@@ -17,10 +17,21 @@ void ONEPLAYER() {
   circle(rightx, righty, rightd);
 
   //move paddles
+  //left paddle
+  
   if (wkey == true) lefty = lefty - 5;
   if (skey == true) lefty = lefty + 5;
+  
+  //right paddle
+  if (AI == false) {
   if (upkey == true) righty = righty - 5;
   if (downkey == true) righty = righty + 5;
+  } else {
+    righty = bally;
+    
+  }
+
+
 
   //restricting paddles
   //top
@@ -85,8 +96,13 @@ void ONEPLAYER() {
  if (bally >= 550) {
     vy = vy * -1;
   }
+  
+  //win
+  if (leftscore >= 3) mode = GAMEOVER;
+  if (rightscore >= 3) mode = GAMEOVER;
+  
 
 }/////////////////////////////////////////////////////////////////////
 
-void ONEPLAYERClicks() {
+void gameClicks() {
 }

@@ -11,16 +11,17 @@
 //modeframework
 int mode;
 final int INTRO = 1;
-final int TWOPLAYER = 2;
+final int GAME = 2;
 final int PAUSE = 3;
 final int GAMEOVER = 4;
-final int ONEPLAYER = 5;
+
 
 //entity variables
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
 float ballx, bally, balld; //ball
 float vx, vy; //target velocity
 float d1, d2;
+boolean AI;
 
 //scoring
 int leftscore, rightscore, timer;
@@ -42,7 +43,7 @@ color pink = #FF00A1;
 void setup() { /////////////////////////////////////////
   size(800, 600);
   
-  //STARTING mode
+  //START MODE
   mode = INTRO;
   
   //initialize paddles
@@ -72,14 +73,12 @@ void setup() { /////////////////////////////////////////
 void draw() {
   if (mode == INTRO) {
     intro();
-  } else if (mode == TWOPLAYER) {
-    TWOPLAYER();
+  } else if (mode == GAME) {
+    game();
   } else if (mode == PAUSE) {
     pause();
   } else if (mode == GAMEOVER) {
     gameover();
-  } else if (mode == ONEPLAYER) {
-    ONEPLAYER();
   } else {
     println("Mode error: " + mode);
   }

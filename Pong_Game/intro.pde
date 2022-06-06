@@ -36,16 +36,17 @@ void intro() {
 void introClicks() {
   //1 player
   if (mouseX > 125 && mouseX < 325 && mouseY > 330 && mouseY < 445) {
-    mode = ONEPLAYER;
+    mode = GAME;
     leftscore = 0;
     rightscore = 0;
+    AI = true;
   }
 
   //2 player
   if (mouseX > 475 && mouseX < 675 && mouseY > 330 && mouseY < 445) {
-    mode = TWOPLAYER;
+    mode = GAME;
     leftscore = 0;
     rightscore = 0;
+    AI = false;
   }
-
 }

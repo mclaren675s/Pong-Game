@@ -24,14 +24,14 @@ void intro() {
   fill(red);
   rect(125, 330, 200, 115);
   fill(black);
-  text("1 Player", 175, 400);
+  text("1 Player", 175-25, 400);
 
   //2player button
   tactilesquare(475, 330, 200, 115);
   fill(red);
   rect(475, 330, 200, 115);
   fill(black);
-  text("2 Player", 525, 400);
+  text("2 Player", 525-22, 400);
 }
 
 void introClicks() {

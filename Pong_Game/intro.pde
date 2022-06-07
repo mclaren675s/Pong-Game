@@ -7,6 +7,7 @@ void intro() {
 
 
   //title
+  textFont(retrowave);
   fill(red);
   stroke(blue);
   textSize(128);

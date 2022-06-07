@@ -2,12 +2,14 @@
 //Alex Chapman
 
 //To Do
-//- sound effects
-//- tactile buttons
-//- Intro Screen
-//
+//-----------------
+//- Pause Screen
+//- Sound Effects
+//- Custom Fonts
 
 
+//Fonts
+PFont retrowave;
 //modeframework
 int mode;
 final int INTRO = 1;
@@ -68,6 +70,8 @@ void setup() { /////////////////////////////////////////
   vy = random(0);
   timer = 100;
   
+  //font
+  retrowave = createFont("retrowave.ttf", 80);
 }
 
 void draw() {

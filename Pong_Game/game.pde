@@ -1,6 +1,6 @@
 void game() {
   background(0);
-  
+
   //scoreboard
   textSize(50);
   fill(red);
@@ -9,7 +9,7 @@ void game() {
   text(rightscore, 3*width/4, 100);
   //text(timer, 3*width/4, 550);
   timer = timer - 1;
-  
+
   //draw paddles
   fill(red);
   circle(leftx, lefty, leftd);
@@ -18,19 +18,39 @@ void game() {
 
   //move paddles
   //left paddle
-  
+
   if (wkey == true) lefty = lefty - 5;
   if (skey == true) lefty = lefty + 5;
-  
+
   //right paddle
   if (AI == false) {
-  if (upkey == true) righty = righty - 5;
-  if (downkey == true) righty = righty + 5;
+    if (upkey == true) righty = righty - 5;
+    if (downkey == true) righty = righty + 5;
   } else {
-    righty = bally;
-    
+    //AI
+    if (ballx > 400) {
+      if (bally < righty) {
+        //above
+        righty = righty - 5;
+        
+        
+        
+      } else {
+        //below
+        righty = righty + 5;
+        
+        
+        
+        
+      }
+    }
   }
-
+  /*
+   if the ball is on the right side {
+   if ball is above the right paddle, move up
+   if ball is below the right paddle, move down
+   }
+   */
 
 
   //restricting paddles
@@ -40,19 +60,19 @@ void game() {
   //bottom
   if (lefty > 500 ) lefty = 500;
   if (righty > 500 ) righty = 500;
-  
+
   //ball
   fill(black);
   stroke(white);
   strokeWeight(8);
   circle(ballx, bally, balld);
-  
+
   //move ball
   if (timer < 0) {
-  ballx = ballx + vx;
-  bally = bally + vy;
+    ballx = ballx + vx;
+    bally = bally + vy;
   }
-  
+
   //scoring
   if (ballx < 0) {
     rightscore++;
@@ -61,7 +81,7 @@ void game() {
     timer = 100;
     vy = 0;
   }
-  
+
   if (ballx > 800) {
     leftscore++;
     ballx = width/2;
@@ -69,7 +89,7 @@ void game() {
     timer = 100;
     vy = 0;
   }
-  
+
   //collisions
   //left paddle
   //initialize distance
@@ -91,17 +111,15 @@ void game() {
   if (bally <= 50) {
     vy = vy * -1;
   }
- 
+
   //bottom wall
- if (bally >= 550) {
+  if (bally >= 550) {
     vy = vy * -1;
   }
-  
+
   //win
   if (leftscore >= 3) mode = GAMEOVER;
   if (rightscore >= 3) mode = GAMEOVER;
-  
-
 }/////////////////////////////////////////////////////////////////////
 
 void gameClicks() {

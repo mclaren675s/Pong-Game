@@ -1,12 +1,12 @@
-//Pong Game
 //Alex Chapman
+//Pong Game
 
-//To Do
-//-----------------
-//- Pause Screen
-//- Sound Effects
-//- Custom Fonts
-
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 
 //Fonts
 PFont retrowave;
@@ -42,6 +42,11 @@ color blue = #45caff;
 color purple = #8400FF;
 color pink = #FF00A1;
 
+
+//sound variables
+Minim minim;
+AudioPlayer theme, bump, gameover, point;
+
 void setup() { /////////////////////////////////////////
   size(800, 600);
   
@@ -72,6 +77,14 @@ void setup() { /////////////////////////////////////////
   
   //font
   retrowave = createFont("retrowave.ttf", 80);
+  
+  //minim
+  minim = new Minim(this);
+  theme = minim.loadFile("theme.mp3");
+  bump = minim.loadFile("bump.mp3");
+  gameover = minim.loadFile("gameover.mp3");
+  point = minim.loadFile("point.mp3");
+  
 }
 
 void draw() {

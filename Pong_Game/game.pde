@@ -1,5 +1,12 @@
 void game() {
   background(0);
+  
+  //pause button
+  stroke(black);
+  circle(50, 50, 75);
+  stroke(white);
+  rect(30, 30, 10, 45);
+  rect(60, 30, 10, 45);
 
   //scoreboard
   textSize(50);
@@ -32,11 +39,9 @@ void game() {
       if (bally < righty) {
         //above
         righty = righty - 5;
-
       } else {
         //below
         righty = righty + 5;
-        
       }
     }
   }
@@ -70,6 +75,8 @@ void game() {
 
   //scoring
   if (ballx < 0) {
+    point.rewind();
+    point.play();
     rightscore++;
     ballx = width/2;
     bally = height/2;
@@ -78,6 +85,8 @@ void game() {
   }
 
   if (ballx > 800) {
+    point.rewind();
+    point.play();
     leftscore++;
     ballx = width/2;
     bally = height/2;
@@ -91,6 +100,8 @@ void game() {
   strokeWeight(8);
   d1 = dist(leftx, lefty, ballx, bally);
   if (d1 <= balld/2 + leftd/2) {
+    bump.rewind();
+    bump.play();
     vx = (ballx - leftx)/10;
     vy = (bally - lefty)/10;
   }
@@ -98,24 +109,44 @@ void game() {
   //right paddle
   d2 = dist(rightx, righty, ballx, bally);
   if (d2 <= balld/2 + rightd/2) {
+    bump.rewind();
+    bump.play();
     vx = (ballx - rightx)/10;
     vy = (bally - righty)/10;
   }
 
   //top wall
   if (bally <= 50) {
+    bump.rewind();
+    bump.play();
     vy = vy * -1;
   }
 
   //bottom wall
   if (bally >= 550) {
+    bump.rewind();
+    bump.play();
     vy = vy * -1;
   }
 
   //win
-  if (leftscore >= 3) mode = GAMEOVER;
-  if (rightscore >= 3) mode = GAMEOVER;
+  if (leftscore >= 3) {
+    gameover.rewind();
+    gameover.play();
+    mode = GAMEOVER;
+  }
+
+
+  if (rightscore >= 3) {
+    gameover.rewind();
+    gameover.play();
+    mode = GAMEOVER;
+  }
 }/////////////////////////////////////////////////////////////////////
 
 void gameClicks() {
+  //pausebutton
+  if (dist(mouseX, mouseY, 50, 50) < 75) {
+    mode = PAUSE;
+  }
 }

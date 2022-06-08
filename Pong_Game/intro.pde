@@ -1,6 +1,6 @@
 void intro() {
   background (black);
-
+  theme.play();
   //guides
   //line(400, 0, 400, 600);
   //line(0, 300, 800, 300);

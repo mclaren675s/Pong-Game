@@ -32,15 +32,10 @@ void game() {
       if (bally < righty) {
         //above
         righty = righty - 5;
-        
-        
-        
+
       } else {
         //below
         righty = righty + 5;
-        
-        
-        
         
       }
     }

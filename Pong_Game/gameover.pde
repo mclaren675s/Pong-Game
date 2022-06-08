@@ -1,15 +1,17 @@
 void gameover() {
   textSize(72);
+  textFont(retrowave);
+  
   if (leftscore > rightscore) {
     
     background(red);
     fill(black);
-    text("RED WON!", 270, height/2);
+    text("RED WON!", 218, height/2);
     
   } else {
     background(blue);
     fill(black);
-    text("BLUE WON!", 233, height/2);
+    text("BLUE WON!", 170, height/2);
     
   }
   //guide

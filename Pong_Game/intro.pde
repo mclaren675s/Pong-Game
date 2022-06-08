@@ -12,9 +12,9 @@ void intro() {
   stroke(blue);
   textSize(128);
   strokeWeight(6);
-  text("PONG", 242, 200);
+  text("PONG", 231, 200);
   fill(blue);
-  text("PONG", 242-6, 200-6);
+  text("PONG", 231-6, 200-6);
   fill(red);
   stroke(blue);
   textSize(30);
@@ -31,13 +31,15 @@ void intro() {
   fill(red);
   rect(475, 330, 200, 115);
   fill(black);
-  text("2 Player", 525-22, 400);
+  text("2 Player", 525-28, 400);
 }
 
 void introClicks() {
   //1 player
   if (mouseX > 125 && mouseX < 325 && mouseY > 330 && mouseY < 445) {
     mode = GAME;
+    lefty = height/2;
+    righty = height/2;
     leftscore = 0;
     rightscore = 0;
     AI = true;
@@ -46,6 +48,8 @@ void introClicks() {
   //2 player
   if (mouseX > 475 && mouseX < 675 && mouseY > 330 && mouseY < 445) {
     mode = GAME;
+    lefty = height/2;
+    righty = height/2;
     leftscore = 0;
     rightscore = 0;
     AI = false;

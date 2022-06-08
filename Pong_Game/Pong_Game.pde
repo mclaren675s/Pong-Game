@@ -67,7 +67,7 @@ void setup() { /////////////////////////////////////////
   bally = height/2;
   balld = 100; 
 
-  //initialize keyboard vars
+  //initialize keyboard variables
   wkey = skey = upkey = downkey = false;
 
   //initialize

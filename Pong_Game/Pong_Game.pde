@@ -17,7 +17,6 @@ final int GAME = 2;
 final int PAUSE = 3;
 final int GAMEOVER = 4;
 
-
 //entity variables
 float leftx, lefty, leftd, rightx, righty, rightd; //paddles
 float ballx, bally, balld; //ball
@@ -42,14 +41,13 @@ color blue = #45caff;
 color purple = #8400FF;
 color pink = #FF00A1;
 
-
 //sound variables
 Minim minim;
 AudioPlayer theme, bump, gameover, point;
 
 void setup() { /////////////////////////////////////////
   size(800, 600);
-  
+ 
   //START MODE
   mode = INTRO;
   
@@ -84,7 +82,6 @@ void setup() { /////////////////////////////////////////
   bump = minim.loadFile("bump.mp3");
   gameover = minim.loadFile("gameover.mp3");
   point = minim.loadFile("point.mp3");
-  
 }
 
 void draw() {
